@@ -1,0 +1,6 @@
+@inproceedings{text2img_eval_2023,
+    title={Toward Verifiable and Reproducible Human Evaluation for Text-to-Image Generation},
+    author={Otani, Mayu and Togashi, Riku and Sawai, Yu and Ishigami, Ryosuke and Nakashima, Yuta and Rahtu, Esa and Heikkilä, Janne and Satoh, Shin’ichi},
+    booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2023}
+}
