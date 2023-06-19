@@ -1,0 +1,5 @@
+QualificationTypeId: 000000000000000000L0 # The percentage of assignments the Worker has submitted that were subsequently approved
+Comparator: GreaterThanOrEqualTo
+IntegerValues:
+  - 99
+ActionsGuarded: Accept

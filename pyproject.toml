@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "tti-eval"
+version = "0.1.0"
+description = ""
+authors = ["mayu-ot <otani_mayu@cyberagent.co.jp>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.24.91"
+pandas = "^1.5.0"
+numpy = "^1.23.4"
+matplotlib = "^3.6.1"
+seaborn = "^0.12.0"
+krippendorff = "^0.5.1"
+click = "^8.1.3"
+simple-parsing = "^0.0.20"
+PyYAML = "^6.0"
+black = "^22.10.0"
+scipy = "^1.9.3"
+tqdm = "^4.64.1"
+parse = "^1.19.0"
+plotly = "^5.11.0"
+pingouin = "^0.5.2"
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

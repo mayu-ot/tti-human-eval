@@ -1,0 +1,6 @@
+Title: "Rate the quality of AI-generated images (WARNING: This HIT may contain adult content. Worker discretion is advised.)"
+Description: Rate the quality of AI-generated images
+Reward: "0.05"
+AssignmentDurationInSeconds: 600 # 10 min. in sec.
+Keywords: rate, image
+AutoApprovalDelayInSeconds: 259200 # 3 days in sec.

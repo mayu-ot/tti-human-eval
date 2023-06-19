@@ -1,0 +1,4 @@
+Comparator: EqualTo
+IntegerValues:
+  - 100
+QualificationTypeId: # Set qualification type id here

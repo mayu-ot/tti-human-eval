@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <title>HIT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <style>
+        figure {
+            text-align: center;
+            font-size: medium;
+            text-indent: 0;
+            border: thin silver solid;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        label {
+            padding-right: 1em;
+        }
+
+        .border-highlight {
+            border: 2px solid rgb(82, 82, 82);
+            padding: 0.03em 0.25em;
+        }
+
+        .crop {
+            width: 512px;
+            height: 512px;
+            object-fit: cover;
+        }
+    </style>
+    <!-- You must include this JavaScript file -->
+    <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+    <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+    <!-- You must include crowd-form so that your task submits answers to MTurk -->
+    <crowd-form answer-format="flatten-objects">
+        <crowd-instructions link-type="button">
+            <short-summary>
+                <ol>
+                    <li>Read the description below the image carefully.</li>
+                    <li>Check the content of the AI-generated image.</li>
+                    <li>(Q1) Rate if the image fully represents the content of the description.</li>
+                    <li>(Q2) Rate the quality of the image.</li>
+                </ol>
+            </short-summary>
+            <detailed-instructions header="Generated image evaluation instructions">
+                <h1 id="instruction">Instruction</h1>
+                <ol>
+                    <li>Read the description below the image carefully.</li>
+                    <li>Check the content of the AI-generated image.</li>
+                    <li>(Q1) Rate if the image fully represents the content of the caption.</li>
+                    <li>(Q2) Check if any irregular shapes and textures are found in the image and rate the quality of
+                        the
+                        image.</li>
+                </ol>
+                <h2 id="examples">Examples</h2>
+                <h3 id="q1">Q1. How well does the image match the description?</h3>
+                <p>When you answer Q1, please judge only by the correspondence of content in the caption and the image.
+                    For example, we consider the caption and image below match exactly. Although the image has some
+                    irregular
+                    textures
+                    and shapes, all the important content, e.g., man, bike, and friend on the back, can be easily
+                    identified.
+                </p>
+
+                <figure>
+                    <img src="path/to/a%20man%20on%20his%20bike%20with%20his%20friend%20riding%20on%20the%20back.png"
+                        width="255">
+                    <figcaption>a man on his bike with his friend riding on the back</figcaption>
+                </figure>
+                <p>
+                    The image below shows all the objects described in the caption. However, the cat <strong>is not
+                        sitting on top of</strong> a keyboard. Please select <span class="border-highlight">Has a few
+                        minor discrepancies</span> for an image with such a minor failure.
+                </p>
+                <figure>
+                    <img src="path/to/A%20black%20fluffy%20cat%20sitting%20on%20top%20of%20a%20computer%20keyboard.png"
+                        width="255">
+                    <figcaption>
+                        A black fluffy cat sitting on top of a computer keyboard.
+                    </figcaption>
+                </figure>
+                <h3 id="q2">Q2. Rate the quality of the image.</h3>
+                <p>When you answer Q2, please rate if the image look like a real image.
+                    A high quality image is one that is hard to tell if it is real or AI-generated.
+                    Some AI-generated images may have artifacts such as irregular textures, shapes, or noise as in the
+                    examples
+                    below. Rate such images as lower quality.</p>
+                <img src="path/to/artifacts.png" width="70%">
+            </detailed-instructions>
+        </crowd-instructions>
+        <h2 style="color: red;">Please read the instructions carefully before working on this HIT.</h2>
+        <p>NOTE: Please <b style="color: rgb(231, 70, 70)">do NOT submit more than 250 HITs</b> in this batch. We
+            intend to collect submissions from diverse workers. We may reject submissions from workers who excessively
+            violate this limit.</p>
+        <figure>
+            <img src="https://storage.googleapis.com/tti-eval-pj/images/${model_name}/${file_name}" , class="crop">
+            <figcaption>${caption}</figcaption>
+        </figure>
+        <div style="margin-top: 20px; margin-bottom: 20px; margin-left: 10px;">
+            <h3>
+                Q1. How well does the image match the description?
+            </h3>
+            <input type="radio" id="faithfull-worst" name="faithfull" value="1" required>
+            <label for="faithfull-worst">Does not match at all</label>
+            <input type="radio" id="faithfull-worse" name="faithfull" value="2" required>
+            <label for="faithfull-worse">Has significant discrepancies</label>
+            <input type="radio" id="faithfull-avr" name="faithfull" value="3" required>
+            <label for="faithfull-avr">Has several minor discrepancies</label>
+            <input type="radio" id="faithfull-better" name="faithfull" value="4" required>
+            <label for="faithfull-better">Has a few minor discrepancies</label>
+            <input type="radio" id="faithfull-best" name="faithfull" value="5" required>
+            <label for="faithfull-best">Matches exactly</label>
+
+            <div>
+                <h4 style="color: rgb(231, 70, 70)">Check this box only when you feel you cannot answer Q1 for any
+                    reasons,
+                    such as poor
+                    quality of images
+                    or
+                    descriptions.</h4>
+                <input type="checkbox" id="lack-confidence" name="lack-confidence">
+                <label for="lack-confidence">Unable to answer</label>
+            </div>
+
+            <h3>
+                Q2. Does the image look like an AI-generated photo or a real photo?
+            </h3>
+
+            <input type="radio" id="quality-worst" name="quality" value="1" required>
+            <label for="quality-worst">AI-generated photo</label>
+            <input type="radio" id="quality-worse" name="quality" value="2" required>
+            <label for="quality-worse">Probably an AI-generated photo, but photorealistic</label>
+            <input type="radio" id="quality-avr" name="quality" value="3" required>
+            <label for="quality-avr">Neutral</label>
+            <input type="radio" id="quality-better" name="quality" value="4" required>
+            <label for="quality-better">Probably a real photo, but with irregular textures and shapes</label>
+            <input type="radio" id="quality-best" name="quality" value="5" required>
+            <label for="quality-best">Real photo</label>
+        </div>
+
+    </crowd-form>
+</body>
+
+</html>

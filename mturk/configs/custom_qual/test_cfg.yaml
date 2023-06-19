@@ -1,0 +1,6 @@
+Name: Image and caption skill check test
+Keywords: test, image
+Description: Brief test for generated image assessment
+QualificationTypeStatus: Active
+RetryDelayInSeconds: 300
+TestDurationInSeconds: 300

@@ -1,0 +1,9 @@
+QualificationTypeId: "00000000000000000071" # The location of the Worker
+Comparator: In
+LocaleValues: # We follow "The Perils of Using Mechanical Turk to Evaluate Open-Ended Text Generation"
+  - Country: US
+  - Country: CA
+  - Country: GB
+  - Country: AU
+  - Country: NZ
+ActionsGuarded: Accept

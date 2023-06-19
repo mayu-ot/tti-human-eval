@@ -1,0 +1,5 @@
+QualificationTypeId: "00000000000000000040" # total number of approved HITs
+Comparator: GreaterThanOrEqualTo
+IntegerValues:
+  - 5000
+ActionsGuarded: Accept

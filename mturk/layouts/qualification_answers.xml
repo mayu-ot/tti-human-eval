@@ -1,0 +1,44 @@
+<AnswerKey xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/AnswerKey.xsd">
+<Question>
+    <QuestionIdentifier>self_report</QuestionIdentifier>
+    <AnswerOption>
+        <SelectionIdentifier>yes</SelectionIdentifier>
+        <AnswerScore>1</AnswerScore>
+    </AnswerOption>
+    <AnswerOption>
+        <SelectionIdentifier>no</SelectionIdentifier>
+        <AnswerScore>0</AnswerScore>
+    </AnswerOption>
+</Question>
+<Question>
+    <QuestionIdentifier>ai_or_real_photo</QuestionIdentifier>
+    <AnswerOption>
+        <SelectionIdentifier>A</SelectionIdentifier>
+        <AnswerScore>0</AnswerScore>
+    </AnswerOption>        
+    <AnswerOption>
+        <SelectionIdentifier>B</SelectionIdentifier>
+        <AnswerScore>1</AnswerScore>
+    </AnswerOption>    
+    <AnswerOption>
+        <SelectionIdentifier>Neither</SelectionIdentifier>
+        <AnswerScore>0</AnswerScore>
+    </AnswerOption>                                
+</Question>
+<Question>
+    <QuestionIdentifier>hard_negative_caption</QuestionIdentifier>
+    <AnswerOption>
+        <SelectionIdentifier>A</SelectionIdentifier>
+        <AnswerScore>1</AnswerScore>
+    </AnswerOption>        
+    <AnswerOption>
+        <SelectionIdentifier>B</SelectionIdentifier>
+        <AnswerScore>0</AnswerScore>
+    </AnswerOption>                                  
+</Question>
+<QualificationValueMapping>
+  <PercentageMapping>
+    <MaximumSummedScore>3</MaximumSummedScore>
+  </PercentageMapping>
+</QualificationValueMapping>
+</AnswerKey>

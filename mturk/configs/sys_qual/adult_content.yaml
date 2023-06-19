@@ -1,0 +1,5 @@
+QualificationTypeId: "00000000000000000060" # Requires workers to acknowledge that they are over 18 and that they agree to work on potentially offensive content.
+Comparator: EqualTo
+IntegerValues:
+  - 1
+ActionsGuarded: PreviewAndAccept

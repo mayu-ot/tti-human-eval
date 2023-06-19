@@ -1,0 +1,99 @@
+<QuestionForm xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd'>
+<Question>
+        <QuestionIdentifier>self_report</QuestionIdentifier>
+        <DisplayName>Q1</DisplayName>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+                <Text> Is English your first language? </Text>
+        </QuestionContent>
+        <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>yes</SelectionIdentifier>
+              <Text>Yes</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>no</SelectionIdentifier>
+              <Text>No</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+</Question>
+<Overview>
+<Title>Image Assessment</Title>
+<Text>Carefully review the two images and identify if the image is AI-generated or a real photo.</Text>
+</Overview>
+<Question>
+      <QuestionIdentifier>ai_or_real_photo</QuestionIdentifier>
+      <DisplayName>Q2</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <Text> Which is a real photo? </Text>
+        <Binary>
+          <MimeType>
+            <Type>image</Type>
+            <SubType>png</SubType>
+          </MimeType>
+          <DataURL>path/to/ai_or_real.png</DataURL>
+          <AltText>AI or Real Photo</AltText>
+        </Binary>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>A</SelectionIdentifier>
+              <Text>A</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>B</SelectionIdentifier>
+              <Text>B</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>Neither</SelectionIdentifier>
+              <Text>Neither</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+</Question>
+<Overview>
+<Title>Image-Text Discrepancies Assessment</Title>
+<Text>Carefully review the image and choose a corresponding caption.</Text>
+</Overview>
+<Question>
+      <QuestionIdentifier>hard_negative_caption</QuestionIdentifier>
+      <DisplayName>Q3</DisplayName>
+      <IsRequired>true</IsRequired>
+      <QuestionContent>
+        <Text> Which caption best describes the image? </Text>
+        <Binary>
+          <MimeType>
+            <Type>image</Type>
+            <SubType>jpg</SubType>
+          </MimeType>
+          <DataURL>https://farm4.staticflickr.com/3227/2953024602_530a5a6a84_z.jpg</DataURL>
+          <AltText>An image</AltText>
+        </Binary>
+      </QuestionContent>
+      <AnswerSpecification>
+        <SelectionAnswer>
+          <StyleSuggestion>radiobutton</StyleSuggestion>
+          <Selections>
+            <Selection>
+              <SelectionIdentifier>A</SelectionIdentifier>
+              <Text>a stuffed bear is sitting at the computer chair holding a notebook.</Text>
+            </Selection>
+            <Selection>
+              <SelectionIdentifier>B</SelectionIdentifier>
+              <Text>a stuffed bear wearing headphones and sitting in front of a computer keyboard.</Text>
+            </Selection>
+          </Selections>
+        </SelectionAnswer>
+      </AnswerSpecification>
+</Question>
+</QuestionForm>
