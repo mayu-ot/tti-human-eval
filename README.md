@@ -38,5 +38,5 @@ year={2023}
 Licensed under GPL-3.0 license.
 
 ## TODOs
-[ ] Publish collected human annotations and generated images
-[ ] Solve license issue
+- [ ] Publish collected human annotations and generated images
+- [ ] Solve license issue
