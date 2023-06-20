@@ -8,7 +8,7 @@ Toward Verifiable and Reproducible Human Evaluation for Text-to-Image Generation
 poetry install
 ```
 
-## Setting up AMT account
+# Setting Up Your Amazon Mechanical Turk (AMT) Account
 ```shell
 export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXX
 export AWS_ACCESS_KEY_ID=XXXXXXXXXXXX
@@ -18,7 +18,7 @@ export AWS_ACCESS_KEY_ID=XXXXXXXXXXXX
 This guide will help you prepare the input data for AMT HITs.
 
 ### Input Data Format
-The input data should be in the form of a CSV (Comma Separated Values) file.
+The input data should be in the form of a CSV file.
 Here's a sample structure of the CSV file:
 | model_name      | file_name        | caption                                      |
 |-----------------|------------------|----------------------------------------------|
@@ -72,6 +72,6 @@ year={2023}
 Licensed under GPL-3.0 license.
 
 ## TODOs
-[ ] Publish collected human annotations and generated images
-[ ] Publish notebooks
-[ ] Solve license issue
+- [ ] Publish collected human annotations and generated images
+- [ ] Publish notebooks
+- [ ] Solve license issue
