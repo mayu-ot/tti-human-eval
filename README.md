@@ -58,6 +58,14 @@ poetry run python mturk/tools/hit_manager.py get-status data/mturk/logs/%Y%m%d_%
 
 The submitted annotations will be saved in a `results.csv` file located in the same directory as the `hits.csv` file.
 
+# Generate a Summary Report of the Results
+
+Use the command below to generate a PNG image displaying key statistics, such as Krippendorff's alpha, task completion time, and label distributions.
+
+```shell
+poetry run python mturk/tools/reporter.py overview $RESULT_CSV
+```
+
 ## Citation
 ```bibtex
 @inproceedings{text2img_eval_2023,
