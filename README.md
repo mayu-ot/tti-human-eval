@@ -66,6 +66,11 @@ Use the command below to generate a PNG image displaying key statistics, such as
 poetry run python mturk/tools/reporter.py overview $RESULT_CSV
 ```
 
+# Human Annotation Dataset
+The human annotations for the experiments presented in our paper can be found here ([annotations](https://storage.googleapis.com/ailab-public/tti-human-eval/human_annos.zip), [images]()).
+
+
+
 ## Citation
 ```bibtex
 @inproceedings{text2img_eval_2023,
@@ -80,6 +85,5 @@ year={2023}
 Licensed under GPL-3.0 license.
 
 ## TODOs
-- [ ] Publish collected human annotations and generated images
 - [ ] Publish notebooks
 - [ ] Solve license issue
