@@ -67,7 +67,7 @@ poetry run python mturk/tools/reporter.py overview $RESULT_CSV
 ```
 
 # Human Annotation Dataset
-The human annotations for the experiments presented in our paper can be found here ([annotations](https://storage.googleapis.com/ailab-public/tti-human-eval/human_annos.zip), [images]()).
+The human annotations for the experiments presented in our paper can be found here ([annotations](https://storage.googleapis.com/ailab-public/tti-human-eval/human_annos.zip), [images (1.9G)](https://storage.googleapis.com/ailab-public/tti-human-eval/img.zip)).
 
 
 
